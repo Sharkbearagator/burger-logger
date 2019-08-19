@@ -3,10 +3,6 @@ var mysql = require("mysql");
 
 var connection;
 
-if(process.env.burger_db){
- connection = mysql.createConnection(process.env.burger_db)
-}
-else{
 
 connection = mysql.createConnection({
   host: "localhost",
@@ -16,7 +12,7 @@ connection = mysql.createConnection({
   database: "burger_db"
 });
 
-}
+
 
 
 connection.connect(function(err) {
